@@ -62,8 +62,8 @@ test:
   imports:
     - dials
   commands:
-    - pytest $SRC_DIR/dials/tests --regression -n auto # [not win]
-    - pytest %SRC_DIR%/dials/tests --regression -n auto # [win]
+    - pytest $SRC_DIR/dials/tests --regression -n auto  # [not win]
+    - pytest %SRC_DIR%/dials/tests --regression -n auto  # [win]
     - pip check
 
 about:
