@@ -9,6 +9,8 @@ source:
   url: https://github.com/dials/dials/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 572b1ce7366f8bde14a4e6df9649e426b6dd23a4ee16d2ab3e35151300dd9551
   folder: dials
+  patches:
+    - 001_patch_coverage.patch
 
 build:
   number: 1
