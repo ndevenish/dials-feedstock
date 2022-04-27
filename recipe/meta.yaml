@@ -13,7 +13,7 @@ source:
     - 001_patch_coverage.patch
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - cluster.dials.exec = dials.command_line.cluster_exec:run
     - dev.dials.csv = dials.command_line.rl_csv:run
@@ -121,7 +121,6 @@ requirements:
     - {{ pin_compatible('cctbx-base') }}
     - {{ pin_compatible('dxtbx') }}
     - boost-cpp
-    - cctbx
     - gemmi
     - h5py
     - jinja2
