@@ -32,7 +32,6 @@ requirements:
     - {{ pin_compatible('cctbx-base') }}
     - {{ pin_compatible('dxtbx') }}
     - boost-cpp
-    - cctbx
     - gemmi
     - h5py
     - jinja2
