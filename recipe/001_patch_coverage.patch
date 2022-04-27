@@ -12,7 +12,7 @@ index 2b9d194a8..accf3a08a 100644
 +    if (_build_type STREQUAL COVERAGE)
 +        message(FATAL_ERROR "Did not know how to run Coverage build for ${CMAKE_CXX_COMPILER_ID}")
 +    endif()
-+    message(INFO "Did not know how to run Coverage build for ${CMAKE_CXX_COMPILER_ID}")
++    message(VERBOSE "Did not know how to run Coverage build for ${CMAKE_CXX_COMPILER_ID}")
 +    return()
  endif()
 
