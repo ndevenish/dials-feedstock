@@ -11,6 +11,7 @@ source:
   folder: dials
   patches:
     - 001_patch_coverage.patch
+    - 002_boost_no_static.patch
 
 build:
   number: 3
