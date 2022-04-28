@@ -6,8 +6,9 @@ if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
     # manually add these to the compiler search path.
     _flag_ccp4io="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/ccp4io/libccp4/ccp4"
     _flag_sitepkg="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages"
-    CFLAGS="$_flag_ccp4io $_flag_sitepkg $CXXFLAGS"
-    CXXFLAGS="$_flag_ccp4io $_flag_sitepkg $CXXFLAGS"
+    _flag_annlib="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/annlib_adaptbx/include/"
+    CFLAGS="$_flag_ccp4io $_flag_sitepkg $_flag_annlib $CXXFLAGS"
+    CXXFLAGS="$_flag_ccp4io $_flag_sitepkg $_flag_annlib $CXXFLAGS"
 fi
 
 mkdir _build
