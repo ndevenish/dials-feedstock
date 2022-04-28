@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+if [[ $CONDA_TOOLCHAIN_BUILD != $CONDA_TOOLCHAIN_HOST ]]; then
+    # Conda does some swizzling when cross compiling, including moving
+    # the site-packages folder to the build prefix. So let's just
+    # manually add these to the compiler search path.
+    _flag_ccp4io="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages/ccp4io/libccp4/ccp4"
+    _flag_sitepkg="-isystem $BUILD_PREFIX/lib/python$PY_VER/site-packages"
+    CFLAGS="$_flag_ccp4io $_flag_sitepkg $CXXFLAGS"
+    CXXFLAGS="$_flag_ccp4io $_flag_sitepkg $CXXFLAGS"
+fi
+
 mkdir _build
 cd _build
 cmake ../dials \
