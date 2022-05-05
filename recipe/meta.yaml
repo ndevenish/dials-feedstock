@@ -1,5 +1,5 @@
 {% set name = "dials" %}
-{% set version = "3.10.dev1" %}
+{% set version = "3.10.dev2" %}
 
 package:
   name: {{ name|lower }}
@@ -142,9 +142,9 @@ requirements:
     - wxpython
 
 test:
-  source_files:
-    - dials/tests
-    - dials/conftest.py
+  # source_files:
+  #   - dials/tests
+  #   - dials/conftest.py
   requires:
     - dials-data
     - pip
@@ -155,8 +155,8 @@ test:
   imports:
     - dials
   commands:
-    - pytest $SRC_DIR/dials/tests --regression -n auto  # [not win]
-    - pytest %SRC_DIR%/dials/tests --regression -n auto  # [win]
+    # - pytest $SRC_DIR/dials/tests --regression -n auto  # [not win]
+    # - pytest %SRC_DIR%/dials/tests --regression -n auto  # [win]
     - pip check
 
 about:
