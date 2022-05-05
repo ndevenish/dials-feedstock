@@ -6,8 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/dials/dials/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 572b1ce7366f8bde14a4e6df9649e426b6dd23a4ee16d2ab3e35151300dd9551
+  git_url: https://github.com/jbeilstenedmands/dials
+  git_rev: cosym_vec_filtering
+  # url: https://github.com/dials/dials/archive/refs/tags/v{{ version }}.tar.gz
+  # sha256: 572b1ce7366f8bde14a4e6df9649e426b6dd23a4ee16d2ab3e35151300dd9551
   folder: dials
   patches:
     - 001_patch_coverage.patch
@@ -15,7 +17,7 @@ source:
     - 003_windows_xfail.patch
 
 build:
-  number: 3
+  number: 0
   entry_points:
     - cluster.dials.exec = dials.command_line.cluster_exec:run
     - dev.dials.csv = dials.command_line.rl_csv:run
@@ -145,13 +147,13 @@ test:
   # source_files:
   #   - dials/tests
   #   - dials/conftest.py
-  requires:
-    - dials-data
-    - pip
-    - pytest
-    - pytest-forked
-    - pytest-mock
-    - pytest-xdist
+  # requires:
+  #   - dials-data
+  #   - pip
+  #   - pytest
+  #   - pytest-forked
+  #   - pytest-mock
+  #   - pytest-xdist
   imports:
     - dials
   commands:
