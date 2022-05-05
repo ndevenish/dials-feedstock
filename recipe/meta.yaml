@@ -147,9 +147,9 @@ test:
   # source_files:
   #   - dials/tests
   #   - dials/conftest.py
-  # requires:
+  requires:
   #   - dials-data
-  #   - pip
+    - pip
   #   - pytest
   #   - pytest-forked
   #   - pytest-mock
