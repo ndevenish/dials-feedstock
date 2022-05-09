@@ -15,7 +15,8 @@ source:
     - 003_windows_xfail.patch
 
 build:
-  number: 3
+  number: 4
+  osx_is_app: True
   entry_points:
     - cluster.dials.exec = dials.command_line.cluster_exec:run
     - dev.dials.csv = dials.command_line.rl_csv:run
