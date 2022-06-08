@@ -9,8 +9,6 @@ source:
   git_url: https://github.com/ndevenish/dials-fork
   git_rev: wx_segv
   folder: dials
-  patches:
-    - 003_windows_xfail.patch
 
 build:
   skip: True  # [py!=38 or win]
