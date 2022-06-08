@@ -1,13 +1,13 @@
 {% set name = "dials" %}
-{% set version = "3.10.dev1" %}
+{% set version = "3.10.dev2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/dials/dials/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 572b1ce7366f8bde14a4e6df9649e426b6dd23a4ee16d2ab3e35151300dd9551
+  git_url: https://github.com/ndevenish/dials-fork
+  git_rev: wx_segv
   folder: dials
   patches:
     - 001_patch_coverage.patch
@@ -15,7 +15,7 @@ source:
     - 003_windows_xfail.patch
 
 build:
-  number: 4
+  number: 0
   osx_is_app: True
   entry_points:
     - cluster.dials.exec = dials.command_line.cluster_exec:run
