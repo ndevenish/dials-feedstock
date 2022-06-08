@@ -15,7 +15,7 @@ source:
     - 003_windows_xfail.patch
 
 build:
-  skip: True  # [py!=38 or win or (osx and not arm64)]
+  skip: True  # [py!=38 or win]
   number: 0
   osx_is_app: True
   entry_points:
