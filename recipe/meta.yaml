@@ -10,8 +10,6 @@ source:
   git_rev: wx_segv
   folder: dials
   patches:
-    - 001_patch_coverage.patch
-    - 002_boost_no_static.patch
     - 003_windows_xfail.patch
 
 build:
